@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">FoodRescue</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nome_do_produto">Nome do produto</string>
+    <string name="descricao_do_produto">Descrição do produto</string>
+</resources>

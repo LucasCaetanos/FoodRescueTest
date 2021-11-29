@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_NovoProduto">
+
+    <fragment
+        android:id="@+id/telaLogin"
+        android:name="com.batista.recyclerviewapp.telaCadastro.TelaLogin"
+        android:label="fragment_tela_login"
+        tools:layout="@layout/fragment_tela_login">
+        <action
+            android:id="@+id/action_telaLogin_to_itemFragment2"
+            app:destination="@id/itemFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_NovoProduto"
+        android:name="com.batista.recyclerviewapp.adicionarProduto.FragmentNovoProduto"
+        android:label="@string/label_novo_fragment"
+        tools:layout="@layout/fragment_novo_produto">
+        <action
+            android:id="@+id/action_fragment_NovoProduto_to_itemFragment2"
+            app:destination="@id/itemFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_EditarProduto"
+        android:name="com.batista.recyclerviewapp.atualizarProduto.FragmentEditarProduto"
+        android:label="fragment__editar_produto"
+        tools:layout="@layout/fragment_editar_produto">
+        <action
+            android:id="@+id/action_fragment_EditarProduto_to_itemFragment2"
+            app:destination="@id/itemFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment2"
+        android:name="com.batista.recyclerviewapp.listaProdutos.ItemFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_itemFragment2_to_fragment_NovoProduto"
+            app:destination="@id/fragment_NovoProduto" />
+        <action
+            android:id="@+id/action_itemFragment2_to_fragment_EditarProduto"
+            app:destination="@id/fragment_EditarProduto" />
+    </fragment>
+</navigation>
